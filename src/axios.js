@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'http://ilhampratama.pythonanywhere.com/';
+const baseURL = 'https://ilhampratama.pythonanywhere.com/';
 
 const axiosInstance = axios.create({
 	baseURL: baseURL,
