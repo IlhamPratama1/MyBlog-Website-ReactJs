@@ -1,2 +1,3 @@
-# MyBlog-Website-ReactJs
-My Personal Website made with ReactJs
+# My Blog - Website - ReactJs
+
+My Blog website created using ReactJs
