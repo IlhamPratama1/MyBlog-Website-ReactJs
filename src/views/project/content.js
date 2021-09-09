@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import CardWeb from './temp/cardWeb';
 import Card from './temp/card';
+import CardGame from './temp/cardGame';
 import CardHeroSkeleton from './skeleton/cardHeroSkeleton';
 import CardSkeleton from './skeleton/cardSkeleton';
+import CardGameSkeleton from './skeleton/cardGameSkeleton';
 import axiosInstance from '../../axios';
 import { Link } from "react-router-dom";
 import CardWebSkeleton from './skeleton/cardWebSkeleton';
@@ -61,7 +63,7 @@ function ProjectContent() {
 	}, [length]);
 
     return(
-        <div className="mb-40 px-12 md:px-40 space-y-6">
+        <div className="mb-40 px-12 md:px-40 space-y-10">
             <h1 className="font-playfair font-bold text-4xl">Games</h1>
             <div className="grid gap-x-14 gap-y-10 grid-cols-1 lg:grid-cols-2">
                 <div className="space-y-6">                    
@@ -102,6 +104,29 @@ function ProjectContent() {
                     }
                 </div>               
             </div>
+            {games.isLoading ?
+                <div className="grid gap-x-14 gap-y-10 grid-cols-1 lg:grid-cols-4">
+                    <CardGameSkeleton />
+                    <CardGameSkeleton />
+                    <CardGameSkeleton />
+                    <CardGameSkeleton />
+                </div> :
+                <div className="grid gap-x-14 gap-y-10 grid-cols-1 lg:grid-cols-4"> {
+                    games.data.map((game) => {
+                        return (
+                            <CardGame 
+                                key={game.id}
+                                img={game.game_image[0].image}
+                                title={game.title}
+                                desc={game.desc}
+                                category={game.category_name}
+                                href={game.href}
+                                slug={game.slug}
+                            />
+                        ); 
+                    }).slice(3, 7)}
+                </div>
+            }        
             <h1 className="pt-6 font-playfair font-bold text-4xl">Website</h1>
                 {websites.isLoading ?
                     <div className="grid gap-12 grid-cols-1 lg:grid-cols-3">
