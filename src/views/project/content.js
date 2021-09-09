@@ -14,7 +14,6 @@ function ProjectContent() {
                 isLoading: false,
                 data: allData
             });
-            console.log(allData);
         })
         .catch(function(error) {
             if (error.response) {
@@ -37,7 +36,6 @@ function ProjectContent() {
                 isLoading: false,
                 data: allData
             });
-            console.log(allData);
         })
         .catch(function(error) {
             if (error.response) {
@@ -64,11 +62,13 @@ function ProjectContent() {
                     games.data.map((game) => {
                         return (
                             <CardGame 
+                                key={game.id}
                                 img={game.game_image[0].image}
                                 title={game.title}
                                 desc={game.desc}
                                 category={game.category_name}
                                 href={game.href}
+                                slug={game.slug}
                             />
                             ); 
                         })
@@ -81,10 +81,12 @@ function ProjectContent() {
                     websites.data.map((web) => {
                         return (
                             <CardWeb 
+                                key={web.id}
                                 img={web.website_image[0].image}
                                 title={web.title}
                                 desc={web.desc}
                                 href={web.href}
+                                slug={web.slug}
                             />
                         ); 
                     })

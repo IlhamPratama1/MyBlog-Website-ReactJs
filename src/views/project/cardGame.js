@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
-function CardGame({ img, title, desc, category, href }) {
+function CardGame({ img, title, desc, category, href, slug, }) {
     return(
         <div className="space-y-2">
-            <a href={href}><img alt="hero1" src={img} /> </a>
+            <Link to={"/project/game/" + slug }><img alt="hero1" src={img} /> </Link>
             <h1 className="font-playfair pt-1 text-xl">{title}</h1>
             <p className="font-source opacity-75 font-light text-sm">{desc}</p>
             <div className="flex items-center space-x-3">

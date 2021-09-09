@@ -20,6 +20,7 @@ module.exports = {
       },
       width: {
         '96': '36rem',
+        '120': '120rem',
       },
       fontSize: {
         'xxs': '0.65rem',
