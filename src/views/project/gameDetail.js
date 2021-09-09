@@ -41,17 +41,17 @@ export default function GameDetail() {
             </div>
             {detail.isLoading ? <div></div> : 
                 <div className="px-8 py-4 space-y-4 lg:px-40 lg:py-16">
-                    <h1 className="font-playfair font-bold text-3xl">Games</h1>
+                    <h1 className="font-playfair font-bold text-4xl">{detail.data.title}</h1>
                     <div className="grid gap-4 grid-cols-1 lg:grid-cols-3">
                         <div className="col-span-1 space-y-4">
                             <a href={detail.data.href} className="text-xs font-source py-2 px-3 bg-white-third hover:bg-white-second hover:text-black-main transition duration-300">{detail.data.category_name}</a>
-                            <p className="font-source opacity-75 font-light text-sm">{detail.data.desc}</p>
-                            <h1 className="font-playfair pt-1 text-xl">Url</h1>
-                            <a href={detail.data.href} className="font-source opacity-75 font-light text-sm">{detail.data.href}</a>
+                            <p className="font-source font-light text-sm">{detail.data.desc}</p>
+                            <h1 className="font-playfair pt-1 text-2xl">Url</h1>
+                            <a href={detail.data.href} className="font-source font-light text-sm">{detail.data.href}</a>
                         </div>
                         <div className="col-span-2 space-y-3">
-                            <h1 className="font-playfair text-xl">Description</h1>
-                            <p className="font-source opacity-75 font-light text-sm">{detail.data.content}</p>
+                            <h1 className="font-playfair text-2xl">Description</h1>
+                            <p className="font-source font-light text-sm">{detail.data.content}</p>
                         </div>
                     </div>                    
                 </div>

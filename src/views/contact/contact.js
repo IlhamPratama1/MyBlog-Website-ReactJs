@@ -2,7 +2,7 @@ import React from 'react';
 
 function ContactSection() {
     return(
-        <div className="pt-4 flex items-center h-screen px-12 md:px-40">
+        <div className="my-20 flex items-center h-screen px-12 md:px-40">
             <div className="text-center">
                 <h1 className=" font-playfair text-3xl lg:text-5xl">Contact Me</h1>
                 <img className="mx-auto w-full lg:w-2/5" alt="contact" src="/static/images/ilustration/Webinar-pana.svg" />

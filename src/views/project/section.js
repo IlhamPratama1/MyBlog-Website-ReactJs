@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ProjectSection() {
     return(
-        <div className="flex items-center pt-4 h-screen px-12 md:px-40">
+        <div className="h-screen flex items-center pt-4 px-12 md:px-40">
             <div className="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2">
                 <div className="flex items-center">
                     <div className="space-y-6">
